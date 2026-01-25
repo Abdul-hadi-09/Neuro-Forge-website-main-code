@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Scraper | Neuro Forge Portfolio</title>
+    <meta name="description" content="High-volume data extraction tool for Amazon products using Python and Selenium.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="{{ url_for('home') }}" class="logo">NeuroForge<span class="dot">.</span></a>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
+                <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+                <li><a href="quote.html" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="section-header" style="padding-top: 150px; margin-bottom: 40px;">
+        <h1>Amazon Product Scraper</h1>
+        <p>Turning e-commerce chaos into structured, actionable data.</p>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="project-details" style="max-width: 800px; margin: 0 auto;">
+                <img src="{{ url_for('static', filename='images/portfolio/amazon-product-scraper.png') }}"
+                    alt="Amazon Scraper"
+                    style="width: 100%; border-radius: 16px; margin-bottom: 2rem; box-shadow: var(--shadow-md);">
+
+                <h2>Overview</h2>
+                <p>In the competitive world of e-commerce, data is king. We built a sophisticated Python-based scraper
+                    designed to extract granular product details, real-time pricing, and customer reviews from Amazon at
+                    scale. This tool bypasses standard anti-bot protections to deliver reliable, structured data feeds.
+                    It empowers businesses to perform competitive analysis, track price fluctuations, and monitor brand
+                    sentiment without manual effort.</p>
+
+                <div class="key-features" style="margin-top: 2rem;">
+                    <h3>Key Features</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-right: 10px;"></i><strong>Anti-Detection
+                                Measures:</strong> Utilizes rotating proxies and user-agent switching to mimic human
+                            behavior and avoid IP bans.</li>
+                        <li style="margin-bottom: 1rem;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-right: 10px;"></i><strong>Granular Data
+                                Extraction:</strong> Captures specific data points including ASIN, BSR, variations,
+                            bullet points, and high-res image URLs.</li>
+                        <li style="margin-bottom: 1rem;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-right: 10px;"></i><strong>Automated
+                                Export:</strong> Automatically cleans and exports data to CSV, JSON, or directly into a
+                            database for immediate analysis.</li>
+                        <li style="margin-bottom: 1rem;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-right: 10px;"></i><strong>Scalable
+                                Workers:</strong> Designed with a multi-threaded architecture to scrape thousands of
+                            product pages simultaneously.</li>
+                    </ul>
+                </div>
+
+                <div class="cta-box" style="margin-top: 3rem; text-align: center;">
+                    <a href="{{ url_for('portfolio') }}" class="btn btn-outline">Back to Portfolio</a>
+                    <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="{{ url_for('home') }}" class="logo">NeuroForge<span class="dot">.</span></a>
+                    <p>Empowering businesses with AI, automation, and data solutions. Build the future with us.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="{{ url_for('service_scraping') }}">Web Scraping</a></li>
+                        <li><a href="{{ url_for('service_automation') }}">Automation</a></li>
+                        <li><a href="{{ url_for('service_chatbots') }}">AI Chatbots</a></li>
+                        <li><a href="{{ url_for('service_web_dev') }}">Web Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Neuro Forge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

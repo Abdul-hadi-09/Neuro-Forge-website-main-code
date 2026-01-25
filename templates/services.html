@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Neuro Forge</title>
+    <meta name="description"
+        content="Comprehensive technology solutions including AI agents, web scraping, and automation bots.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="{{ url_for('home') }}" class="logo">NeuroForge<span class="dot">.</span></a>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
+                <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+                <li><a href="quote.html" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="section-header" style="padding-top: 150px; margin-bottom: 40px;">
+        <h1>Our Services</h1>
+        <p>Comprehensive technology solutions to transform your business operations and drive growth</p>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-comments"></i></div>
+                    <h3>AI Chatbots</h3>
+                    <p>Custom AI chatbots that understand your users, automate support & drive engagement 24/7.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>24/7 Conversational Support</li>
+                            <li>Multi-Language Understanding</li>
+                            <li>Personalized Experiences</li>
+                            <li>Easy Integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_chatbots') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <h3>AI Agent Development</h3>
+                    <p>Custom AI agent development services using GPT-4 and LLMs to automate business operations,
+                        improve customer service, and boost digital efficiency.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Powered by GPT-4, Claude, and Cutting-edge LLMs</li>
+                            <li>Custom AI workflows for support & sales</li>
+                            <li>Seamless integration with CRMs & APIs</li>
+                            <li>Conversational agents for WhatsApp/Social</li>
+                            <li>Multilingual capabilities with memory</li>
+                            <li>Privacy-focused & GDPR-compliant</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_ai_agents') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Lead Generation</h3>
+                    <p>Automated lead-generation pipelines to feed your sales team with qualified prospects.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Precision Targeting</li>
+                            <li>Clean Data Exports</li>
+                            <li>Automated Outreach</li>
+                            <li>Performance Analytics</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_lead_gen') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-spider"></i></div>
+                    <h3>Web Scraping</h3>
+                    <p>Extract data from any website reliably at scale. We build robust scrapers to fuel your business
+                        intelligence and data pipelines.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>High-volume data extraction</li>
+                            <li>Anti-bot bypass technologies</li>
+                            <li>Structured data delivery (CSV, JSON, XML)</li>
+                            <li>Scheduled & real-time scraping</li>
+                            <li>API integration for automated feeds</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_scraping') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Automation Bots</h3>
+                    <p>Streamline your operations with custom bots that handle repetitive digital tasks 24/7, reducing
+                        manual error and saving cost.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Workflow automation (Zapier, Make, Custom)</li>
+                            <li>Browser automation (Selenium, Puppeteer)</li>
+                            <li>Task scheduling & monitoring</li>
+                            <li>Data entry & processing bots</li>
+                            <li>Cross-platform integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_automation') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Modern, responsive high-performance websites and web applications built for growth using the
+                        latest technologies.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Modern tech stack (React, Node, Next.js)</li>
+                            <li>Responsive & mobile-first design</li>
+                            <li>SEO & performance optimization</li>
+                            <li>Secure & scalable architecture</li>
+                            <li>Custom CMS & Admin panels</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_web_dev') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin: 60px 0 30px; font-size: 2rem;">Custom AI Solutions</h3>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Computer Vision</h3>
+                    <p>Advanced image and video analysis solutions to automate quality control, surveillance, and visual
+                        data processing.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Object Detection & Tracking</li>
+                            <li>Facial Recognition Systems</li>
+                            <li>Quality Control Automation</li>
+                            <li>Optical Character Recognition (OCR)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_computer_vision') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Natural Language Processing</h3>
+                    <p>Unlock insights from text data with sophisticated algorithms for sentiment analysis,
+                        classification, and information extraction.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Sentiment Analysis</li>
+                            <li>Text Classification & Summarization</li>
+                            <li>Named Entity Recognition</li>
+                            <li>Document Parsing & Analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_nlp') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="overlay-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Generative AI</h3>
+                    <p>Harness the power of creative AI to generate images, text, and code, enabling new frontiers of
+                        innovation.</p>
+
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Custom Image Generation Models</li>
+                            <li>Content Strategy Automation</li>
+                            <li>Code Generation & Refactoring</li>
+                            <li>Fine-tuned LLM Solutions</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="{{ url_for('service_generative_ai') }}" class="learn-more">Learn More</a>
+                        <a href="quote.html" class="btn btn-primary">Get Started <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Process</h2>
+                <p>How we deliver exceptional results</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Discovery</h3>
+                    <p>We understand your needs and requirements</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Planning</h3>
+                    <p>Create detailed project roadmap and timeline</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Development</h3>
+                    <p>Build and test your solution with precision</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Delivery</h3>
+                    <p>Deploy and provide ongoing support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to Get Started?</h2>
+                <p>Let's discuss your project requirements</p>
+                <div class="cta-btns">
+                    <a href="https://cal.com/neuroforge" class="btn btn-primary">Book Consultation</a>
+                    <a href="quote.html" class="btn btn-outline">Get Custom Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="{{ url_for('home') }}" class="logo">Neuro<span class="dot">.</span>Forge</a>
+                    <p>Empowering businesses with AI, automation, and data solutions. Build the future with us.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="{{ url_for('service_scraping') }}">Web Scraping</a></li>
+                        <li><a href="{{ url_for('service_automation') }}">Automation</a></li>
+                        <li><a href="{{ url_for('service_chatbots') }}">AI Chatbots</a></li>
+                        <li><a href="{{ url_for('service_web_dev') }}">Web Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Neuro Forge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

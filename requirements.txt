@@ -1,0 +1,9 @@
+flask
+sqlite3
+datetime
+os
+gspread
+oauth2client
+smtplib
+zoneinfo
+email

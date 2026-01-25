@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "neuroforge-meetings",
+  "private_key_id": "e433045b982ede57bb15013d0780b2b5689acc16",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCy4jcSJlARhvVB\nfpbnEbwlBU5Y8LU5LNewR0FrjFtOJZI1pkp6yn0lSR9DY2Th1Q1R5B5jsn5upQSs\nLobEjV1QoMcLnm54DZm+20EkjXeWjcCu9R6JsDBRU73KREIDM7VK5xx2qRAayfN/\nI1iRW9Bu5c8frLTu/OaEsgeCsOFiQx5AV1t4sOvlD8X71ntpQm9I86TVjmowd6da\nw96Fk7pKJyRwN6FkpZF5zQs9BCQzykVmh6E57dOkM6jjl5WibDzBfJzAIS0Mxysb\n83lp9UbycbtuGiq+8X3B9ylbPmQFBGKpyFzBFqkR9IIvZt8fd4kv7tUu2mtKUy2v\nMZkBIGLPAgMBAAECggEAFwX8lo5t0cOv/0z+uSDUOWOUcOgSOxilbh/NsLzw5374\ncYVEosc7Ejh2GKNLUbGtNDQLIUPQ+AavMkYOvG+BaiY3WCx9BWCiwCjSGpVGpg76\nlMohsxEFNwJzM/xTDrxyAgD67d7WnswNVfjDpnnNuuhDH02IQBY2yS9svgpsB8xq\nG9fdXnfGvgI7ZbCWFNwEO5Pz9RWzzN5K/DJp44QI21+2jK420bMd1FgNq/1+7zM7\n7S4pSAnwr3lq7ZLhHGlfrPF1wIFDIJ5h2rD57G7HJnZg5ehFiXiB5Q45AXe4gZVG\nEmBTPX8OeI/d2fAkHGnzCgy087P/NTQMdDcqMNgUuQKBgQD0xeo1APTOBch7piTE\nB7nDd1OH4J3lZC2Su8sOlZYzOBKHGzyX/ECq+uy9T2LrlHwPORQfX9MiWD/pYbRp\n0Npnt0QUkv/HT4AWaoCA/cE7HOMqS30Pmoaah0qqX/hu82OqdizIj+8n49OOSOVr\ndBbPuzxK2FXCGH7a5eafqV2YFQKBgQC7FqMi0M6QHXdCz3U0tjysMgK0AZsOsJuL\nLrn8V10l+CzGeWhPm/2aqwIdEFhDQQD3vE4C5Jk6ndzpsZpfKVtSSJ2i2tJRMjrl\nb7d7P3oTYk2L/1eXdmvRPryzb24Ul8+HgDqP+pOUvKvSEP7a/lJit2IsmwTkKHlQ\nn5qZb/jEUwKBgQDDzC11CLbKtsWQY261gJiQSzt+TacAgAoUfjQIDpB/mDL58Eeg\nLCBupRoKtR4j5Dr40mfOURDLQFyfi5CNtIuAu5CyBISmImoLhFYW2OVhK9JrWsdH\nXAygP+jyMKLB3d+z06QvKzPbbNslzhn2wn4c3WF1XWf8Qyv2XkEFJq2/oQKBgQCQ\nnb/+so9pgQ1mHH0KAPBHXuUOBcu5ADVL0hO8BkAfkIXz6XcDSp4vR477rl27puy7\nkthujgwP7mUMU9fzRUGtCiqn7yPx1bUHE2MuJvQTNcKhvAAWOVjARxGQVksuKecm\nY61hDB22NF1QpQiLeVlvqzd9KVsPjmWwN59GifIutwKBgFD9Fbxxv+yF/UwoOA5R\nTBSKi4efCy6XbTfSIUqK1+qyOIwdPHQeSFf7TPGNR3fVr46eT0L2HyePBBtB+ApR\nkMdnzfJxaKV5DCEvLYMvwe6lFPQhaqMnXdRynqOLGb0sD3uGIiBdchibbriXEt6c\nsjGs9tPeLX5OXySz3hX+pgkZ\n-----END PRIVATE KEY-----\n",
+  "client_email": "abdul-hadi@neuroforge-meetings.iam.gserviceaccount.com",
+  "client_id": "111472624294292495979",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/abdul-hadi%40neuroforge-meetings.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
