@@ -114,6 +114,7 @@ def contact():
     if request.method == 'POST':
         name = request.form.get('name')
         email = request.form.get('email')
+        phone = request.form.get('phone')
         subject = request.form.get('subject')
         message = request.form.get('message')
 
@@ -126,7 +127,7 @@ def contact():
                 "%Y-%m-%d %H:%M"
             ).split(" ")
             sheet = client.open_by_key(SPREADSHEET_ID).sheet1
-            sheet.insert_row([date, time, name, email, subject, message], index=2)
+            sheet.insert_row([date, time, name, email, phone, subject, message], index=2)
             flash('Your message has been sent successfully!', 'success')
             
 
@@ -143,6 +144,7 @@ def contact():
             Subject: {subject}
 
             Email: {email}
+            Phone: {phone}
 
             Message:
             {message}
