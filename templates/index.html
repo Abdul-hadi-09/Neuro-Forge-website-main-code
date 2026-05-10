@@ -29,7 +29,8 @@
                 <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
                 <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
                 <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
-                <li><a href="quote.html" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a></li>
+                <li><a href="{{ url_for('quote') }}" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -45,7 +46,7 @@
                     <a href="#contact" class="btn btn-secondary">Contact Us</a>
                 </div>
                 <div class="trust-badges">
-                    <span><i class="fa-solid fa-check-circle"></i> 9+ Years Experience</span>
+                    <span><i class="fa-solid fa-check-circle"></i> 5+ Years Experience</span>
                     <span><i class="fa-solid fa-check-circle"></i> 24/7 Support</span>
                 </div>
             </div>
@@ -74,7 +75,7 @@ await neuroForge.deploy();</code></pre>
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>9+</h3>
+                    <h3>5+</h3>
                     <p>Years Experience</p>
                 </div>
                 <div class="stat-item">
@@ -84,12 +85,12 @@ await neuroForge.deploy();</code></pre>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3>2500+</h3>
+                    <h3>150+</h3>
                     <p>Projects Completed</p>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
-                    <h3>1200+</h3>
+                    <h3>100+</h3>
                     <p>Happy Clients</p>
                 </div>
             </div>
@@ -231,7 +232,7 @@ await neuroForge.deploy();</code></pre>
                 <p>Let's discuss your project and see how we can help you achieve your goals.</p>
                 <div class="cta-btns">
                     <a href="https://cal.com/neuroforge" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="quote.html" class="btn btn-outline">Get Custom Quote</a>
+                    <a href="{{ url_for('quote') }}" class="btn btn-outline">Get Custom Quote</a>
                 </div>
             </div>
         </div>
@@ -240,12 +241,15 @@ await neuroForge.deploy();</code></pre>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <a href="{{ url_for('home') }}" class="logo">Neuro<span class="dot">.</span>Forge</a>
+                    <a href="{{ url_for('home') }}" class="logo">NeuroForge<span class="dot">.</span></a>
                     <p>Empowering businesses with AI, automation, and data solutions. Build the future with us.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/neuro-forge/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/NeuroForges/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/neuro_forges/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/neuro-forge/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/NeuroForges/" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/neuro_forges/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">

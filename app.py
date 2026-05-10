@@ -18,7 +18,7 @@ OWNER_EMAIL = "abdul.hadi7860109@gmail.com"
 SPREADSHEET_ID = "1jmcqyTl7UHnO6Gr9R_fApYQRaSGc-Q0Jl0ueDPH4u44"
 scope = ["https://www.googleapis.com/auth/spreadsheets"]
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-    "neuroforge-meetings-e433045b982e.json",
+        "neuroforge-meetings-27f8e4c0ea86.json",
     scope)
 
 client = gspread.authorize(creds)
@@ -126,10 +126,8 @@ def contact():
             date, time = datetime.now(ZoneInfo("Asia/Karachi")).strftime(
                 "%Y-%m-%d %H:%M"
             ).split(" ")
-            sheet = client.open_by_key(SPREADSHEET_ID).sheet1
-            sheet.insert_row([date, time, name, email, phone, subject, message], index=2)
-            flash('Your message has been sent successfully!', 'success')
-            
+            sheet2 = client.open_by_key(SPREADSHEET_ID).sheet1
+            sheet2.insert_row([date, time, name, email, phone, subject, message], index=2)
 
             msg = EmailMessage()
             msg["From"] = OWNER_EMAIL
@@ -211,9 +209,9 @@ def quote():
             
             # Save to Sheets (concatenating all details into message column for now, 
             # or could expand sheet columns if user wants)
-            sheet = client.open_by_key(SPREADSHEET_ID).get_worksheet(1)
+            sheet = client.open_by_key(SPREADSHEET_ID).worksheet("Qoute Submission Data")
             sheet.insert_row([date, time, name, email, phone, service_type, budget, timeline, project_desc, notes], index=2)
-            
+
             # Send Email
             msg = EmailMessage()
             msg["From"] = OWNER_EMAIL

@@ -28,7 +28,8 @@
                 <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
                 <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
                 <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
-                <li><a href="quote.html" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a></li>
+                <li><a href="{{ url_for('quote') }}" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -59,7 +60,7 @@
                 </div>
 
                 <!-- Wizard Form -->
-                <form id="quote-form" action="quote.html" method="POST" class="wizard-form">
+                <form id="quote-form" action="{{ url_for('quote') }}" method="POST" class="wizard-form">
 
                     <!-- Step 1: Contact Info -->
                     <div class="form-step active" id="step-1">
@@ -194,9 +195,12 @@
                     <a href="{{ url_for('home') }}" class="logo">NeuroForge<span class="dot">.</span></a>
                     <p>Empowering businesses with AI, automation, and data solutions. Build the future with us.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/neuro-forge/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/NeuroForges/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/neuro_forges/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/neuro-forge/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/NeuroForges/" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/neuro_forges/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
