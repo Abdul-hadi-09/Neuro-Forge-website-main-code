@@ -50,6 +50,14 @@ const observerOptions = {
     threshold: 0.05
 };
 
+function showLoading() {
+    document.getElementsByClassName("loading")[0].style.display = "block";
+
+    document.getElementsByClassName("submitBtn")[0].disabled = true;
+    document.getElementsByClassName("submitBtn")[0].innerText = "Submitting...";
+}
+
+
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

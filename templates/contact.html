@@ -29,7 +29,8 @@
                 <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
                 <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
                 <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
-                <li><a href="{{ url_for('quote') }}" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a></li>
+                <li><a href="{{ url_for('quote') }}" class="btn btn-primary" style="margin-left: 1rem;">Get Quote</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -61,7 +62,7 @@
                         <div class="contact-icon-box"><i class="fa-brands fa-whatsapp"></i></div>
                         <div class="info-content">
                             <h3>WhatsApp</h3>
-                            <p><a href="https://wa.me/923338226629" target="_blank">+92 333 8226629</a></p>
+                            <p><a href="https://wa.me/923323252039" target="_blank">+92 332 3252039</a></p>
                             <span style="color: var(--text-muted); font-size: 0.9rem;">For urgent requests</span>
                         </div>
                     </div>
@@ -88,7 +89,7 @@
                         <a href="https://cal.com/neuroforge" class="btn btn-primary"
                             style="width: 100%; margin-bottom: 10px; justify-content: center;">📅 Book Free
                             Consultation</a>
-                        <a href="https://wa.me/923338226629" class="btn btn-outline"
+                        <a href="https://wa.me/923323252039" class="btn btn-outline"
                             style="width: 100%; justify-content: center;">💬 WhatsApp Chat</a>
                     </div>
                 </div>
@@ -96,7 +97,7 @@
                 <!-- Contact Form Column -->
                 <div class="contact-form-wrapper">
                     <h2>Send us a message</h2>
-                    <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
+                    <form class="contact-form" action="{{ url_for('contact') }}" method="POST" onsubmit="showLoading()">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
@@ -128,7 +129,12 @@
                             <textarea id="message" name="message" rows="6"
                                 placeholder="Tell us about your project requirements..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <div class="loading">
+                            <span class="spinner"></span>
+                            Processing Please Wait...
+                        </div>
+                        <button type="submit" class="btn btn-primary submitBtn" style="width: 100%;">Send
+                            Message</button>
                     </form>
                 </div>
             </div>

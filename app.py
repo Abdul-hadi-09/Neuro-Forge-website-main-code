@@ -1,19 +1,11 @@
-import sqlite3
 from flask import Flask, render_template, request, flash, redirect, url_for
-import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo 
-import smtplib
-from email.message import EmailMessage
 
 
 app = Flask(__name__)
-app.secret_key = 'vzo oge dpc'
-APP_PASSWORD = "qlrk vzjo ogme dpyc"
-OWNER_EMAIL = "abdul.hadi7860109@gmail.com"
-
 
 SPREADSHEET_ID = "1jmcqyTl7UHnO6Gr9R_fApYQRaSGc-Q0Jl0ueDPH4u44"
 scope = ["https://www.googleapis.com/auth/spreadsheets"]
@@ -127,30 +119,7 @@ def contact():
                 "%Y-%m-%d %H:%M"
             ).split(" ")
             sheet2 = client.open_by_key(SPREADSHEET_ID).sheet1
-            sheet2.insert_row([date, time, name, email, phone, subject, message], index=2)
-
-            msg = EmailMessage()
-            msg["From"] = OWNER_EMAIL
-            msg["To"] = OWNER_EMAIL
-            msg["Subject"] = "NeuroForge Contact Form Submission"
-            msg["Reply-To"] = email
-
-            msg.set_content(f"""
-            New message from website contact form
-
-            Name: {name}
-            Subject: {subject}
-
-            Email: {email}
-            Phone: {phone}
-
-            Message:
-            {message}
-            """)
-
-            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-                server.login(OWNER_EMAIL, APP_PASSWORD)
-                server.send_message(msg)
+            sheet2.append_row([date, time, name, email, phone, subject, message])
 
         except Exception as e:
             flash(f'An error occurred: {str(e)}', 'error')
@@ -183,7 +152,7 @@ def quote():
 
         try:
             # Prepare message for email/sheet
-            full_message = f"""
+            details = f"""
             Quote Request Details:
             
             -- Contact Info --
@@ -206,31 +175,11 @@ def quote():
             date = dt.strftime("%Y-%m-%d")     
             time = dt.strftime("%I:%M %p")       
 
-            
-            # Save to Sheets (concatenating all details into message column for now, 
-            # or could expand sheet columns if user wants)
+
+
+
             sheet = client.open_by_key(SPREADSHEET_ID).worksheet("Qoute Submission Data")
-            sheet.insert_row([date, time, name, email, phone, service_type, budget, timeline, project_desc, notes], index=2)
-
-            # Send Email
-            msg = EmailMessage()
-            msg["From"] = OWNER_EMAIL
-            msg["To"] = OWNER_EMAIL
-            msg["Subject"] = f"New {service_type} Quote Request from {name}"
-            msg["Reply-To"] = email
-
-            msg.set_content(f"""
-            New Quote Request from Website
-            
-            Name: {name}
-            Email: {email}
-            
-            {full_message}
-            """)
-
-            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-                server.login(OWNER_EMAIL, APP_PASSWORD)
-                server.send_message(msg)
+            sheet.append_row([date, time, name, email, phone, service_type, budget, timeline, project_desc, notes])
 
             return redirect(url_for('submitted'))
 

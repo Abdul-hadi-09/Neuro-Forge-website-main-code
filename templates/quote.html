@@ -60,7 +60,8 @@
                 </div>
 
                 <!-- Wizard Form -->
-                <form id="quote-form" action="{{ url_for('quote') }}" method="POST" class="wizard-form">
+                <form id="quote-form" action="{{ url_for('quote') }}" method="POST" class="wizard-form"
+                    onsubmit="showLoading()">
 
                     <!-- Step 1: Contact Info -->
                     <div class="form-step active" id="step-1">
@@ -94,13 +95,14 @@
                             <div class="select-wrapper">
                                 <select id="service_type" name="service_type" required>
                                     <option value="" disabled selected>Select the service you need</option>
-                                    <option value="Web Scraping & Data Extraction">Web Scraping & Data Extraction
-                                    </option>
-                                    <option value="Process Automation">Process Automation</option>
-                                    <option value="API Development">API Development</option>
-                                    <option value="Data Processing & Analysis">Data Processing & Analysis</option>
-                                    <option value="Custom Software Development">Custom Software Development</option>
+                                    <option value="Automation Bots">Automation Bots</option>
+                                    <option value="AI Agent Development">AI Agent Development</option>
+                                    <option value="Website Development">Website Development</option>
+                                    <option value="Chatbot Development">Chatbot Development</option>
+                                    <option value="Web Scraping">Web Scraping</option>
+                                    <option value="Lead Generation">Lead Generation</option>
                                     <option value="Technical Consulting">Technical Consulting</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
                         </div>
@@ -135,7 +137,7 @@
                                 <div class="select-wrapper">
                                     <select id="timeline" name="timeline" required>
                                         <option value="" disabled selected>Select deadline</option>
-                                        <option value="2-3 days (+30% fee)">2-3 days (+30% fee)</option>
+                                        <option value="2-3 days">2-3 days</option>
                                         <option value="1-2 weeks">1-2 weeks</option>
                                         <option value="1 month">1 month</option>
                                         <option value="Flexible">Flexible</option>
@@ -144,14 +146,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="budget"><i class="fa-solid fa-coins"></i> Budget Range</label>
-                                <div class="select-wrapper">
-                                    <select id="budget" name="budget" required>
-                                        <option value="" disabled selected>Select budget range</option>
-                                        <option value="Under $500">Under $500</option>
-                                        <option value="$500 - $1,000">$500 - $1,000</option>
-                                        <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                                        <option value="$5,000+">$5,000+</option>
-                                    </select>
+                                <div class="input-with-prefix">
+                                    <span class="prefix">$</span>
+                                    <input type="number" id="budget" name="budget" placeholder="Enter your Budget"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -175,11 +173,15 @@
                                 communication method?</p>
                             <textarea id="notes" name="notes" rows="4" placeholder="Any other details..."></textarea>
                         </div>
+                        <div class="loading">
+                            <span class="spinner"></span>
+                            Processing Please Wait...
+                        </div>
 
                         <div class="form-actions space-between">
                             <button type="button" class="btn btn-secondary prev-step" data-prev="2"><i
                                     class="fa-solid fa-arrow-left"></i> Previous</button>
-                            <button type="submit" class="btn btn-primary">Submit Request <i
+                            <button type="submit" class="btn btn-primary submitBtn">Submit Request <i
                                     class="fa-solid fa-paper-plane"></i></button>
                         </div>
                     </div>

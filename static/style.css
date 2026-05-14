@@ -1175,6 +1175,25 @@ pre {
     position: relative;
 }
 
+.input-with-prefix {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-prefix .prefix {
+    position: absolute;
+    left: 16px;
+    color: var(--text-main);
+    font-weight: 500;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.input-with-prefix input {
+    padding-left: 32px !important;
+}
+
 .form-group {
     padding: 12px 0;
 }
@@ -1586,6 +1605,39 @@ pre {
 .form-group textarea::placeholder {
     color: #94a3b8;
 }
+
+
+.loading {
+    display: none;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #ddd;
+    border-top: 3px solid #1a73e8;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Mobile responsive for form row */
 @media (max-width: 600px) {
