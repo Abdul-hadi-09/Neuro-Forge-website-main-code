@@ -2,4 +2,4 @@ flask
 datetime
 gspread
 oauth2client
-smtplib
+zoneinfo
