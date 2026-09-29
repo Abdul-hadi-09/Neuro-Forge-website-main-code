@@ -10,7 +10,7 @@ app = Flask(__name__)
 SPREADSHEET_ID = "1jmcqyTl7UHnO6Gr9R_fApYQRaSGc-Q0Jl0ueDPH4u44"
 scope = ["https://www.googleapis.com/auth/spreadsheets"]
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-        "neuroforge-meetings-27f8e4c0ea86.json",
+        "neuroforge-meetings-0e95ba6395c2.json",
     scope)
 
 client = gspread.authorize(creds)
